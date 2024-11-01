@@ -10,20 +10,21 @@ namespace CS_From
 {
     internal class TestButton : Button
     {
-        public TestButton(int x,int y,int width, int height) 
+        public TestButton(int id,int x,int y,int width, int height) 
         {
             Click += OnClick;
 
-            Text = "ボタン";
-
+            Text = id.ToString();
+            
             Location = new Point(x,y);
 
             Size = new Size(width,height);
         }
 
+
         public virtual void OnClick(object sender, EventArgs s) 
         {
-            MessageBox.Show("オーマイゴシゴシ");
+            MessageBox.Show(Text);
         }
     }
 }
