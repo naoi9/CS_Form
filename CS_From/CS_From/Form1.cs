@@ -12,13 +12,15 @@ namespace CS_From
 {
     public partial class Form1 : Form
     {
+        TestLabel _testlabel;
         public Form1()
         {
+            
             InitializeComponent();
 
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
-                TestButton testbutton = new TestButton(i,(i%5) * 100, (i/5)*100, 100, 100);
+                TestButton testbutton = new TestButton(this, i, (i % 5) * 100, (i / 5) * 100, 100, 100);
                 Controls.Add(testbutton);
             }
 
@@ -42,11 +44,17 @@ namespace CS_From
             //Controls.Add(testbutton9);
             //TestButton testbutton10 = new TestButton(300, 0, 100, 100);
             //Controls.Add(testbutton10);
-        }
+            TestLabel testLabel =
+                new TestLabel("ラベル", 10, 300, 100, 500);
 
-        private void Form1_Load(object sender, EventArgs e)
+
+            Controls.Add(testLabel);
+
+        }
+        public void LavelTextUpdate(string str)
         {
-
+            _testlabel.TextUpdate(str);
         }
+           
     }
 }
