@@ -13,10 +13,13 @@ namespace CS_From
     public partial class Form1 : Form
     {
         TestLabel _testlabel;
+        TextBox _textBox;
         public Form1()
         {
             
             InitializeComponent();
+           
+
 
             for (int i = 0; i < 10; i++)
             {
@@ -44,11 +47,15 @@ namespace CS_From
             //Controls.Add(testbutton9);
             //TestButton testbutton10 = new TestButton(300, 0, 100, 100);
             //Controls.Add(testbutton10);
-            TestLabel testLabel =
+            
+                _testlabel =
                 new TestLabel("ラベル", 10, 300, 100, 500);
 
 
-            Controls.Add(testLabel);
+            Controls.Add(_testlabel);
+
+            _textBox = new TestTextBox("テキストボックス", 10, 250, 100, 500);
+            Controls.Add(_textBox);
 
         }
         public void LavelTextUpdate(string str)
