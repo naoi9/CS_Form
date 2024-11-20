@@ -36,20 +36,18 @@ namespace CS_From
 
             Size = new Size(width,height);
         }
-
+        
         public void OnClick(object sender, EventArgs s)
         {
-           
-            string buttontext = Text;
-            string texBoxText = _form1._textBox.Text;
-            Text = texBoxText;
-            _form1._textBox.Text = buttontext;
+            string t = _form1.ButtonLabelReplacement(Text);
 
+            Text = t;
 
+            _form1.LabelTextUpdate(Text);
         }
         //public void OnClick(object sender, EventArgs s) 
         //{
-        //    _form1.LavelTextUpdate(Text);
+        //    _form1.LabelTextUpdate(Text);
         //}
     }
 }

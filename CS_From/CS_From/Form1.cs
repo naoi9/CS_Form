@@ -12,8 +12,9 @@ namespace CS_From
 {
     public partial class Form1 : Form
     {
-        public TestLabel _testabel;
-        public TextBox _textBox;
+        TestLabel _testlabel;
+        
+        TestTextBox _textBox;
         
         public Form1()
         {
@@ -56,10 +57,17 @@ namespace CS_From
             Controls.Add(_textBox);
 
         }
-        public void LavelTextUpdate(string str)
+        public void LabelTextUpdate(string str)
         {
             _testlabel.TextUpdate(str);
         }
-           
+
+        public string ButtonLabelReplacement(string str)
+        {
+            string s = _textBox.TextReplacement(str);
+
+            return s;
+        }
+
     }
 }
