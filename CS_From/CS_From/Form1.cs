@@ -12,8 +12,9 @@ namespace CS_From
 {
     public partial class Form1 : Form
     {
-        TestLabel _testlabel;
-        TextBox _textBox;
+        public TestLabel _testabel;
+        public TextBox _textBox;
+        
         public Form1()
         {
             
@@ -48,10 +49,7 @@ namespace CS_From
             //TestButton testbutton10 = new TestButton(300, 0, 100, 100);
             //Controls.Add(testbutton10);
             
-                _testlabel =
-                new TestLabel("ラベル", 10, 300, 100, 500);
-
-
+            _testlabel = new TestLabel("ラベル", 10, 300, 100, 500);
             Controls.Add(_testlabel);
 
             _textBox = new TestTextBox("テキストボックス", 10, 250, 100, 500);

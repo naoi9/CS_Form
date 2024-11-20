@@ -39,9 +39,11 @@ namespace CS_From
 
         public void OnClick(object sender, EventArgs s)
         {
-            string temptext = Text;
-            Text = 
-
+           
+            string buttontext = Text;
+            string texBoxText = _form1._textBox.Text;
+            Text = texBoxText;
+            _form1._textBox.Text = buttontext;
 
 
         }
